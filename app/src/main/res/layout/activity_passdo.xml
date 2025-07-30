@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/pass_do"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.PassDo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1E5DDBAF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+
+            <!-- Product Categories RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_categories"
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/image_mau_do"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <!-- Promotion Banner -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:background="@drawable/color_linear_1"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/slogan_1"
+                    android:textColor="#7D5B1E"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="90dp"
+                    android:text="@string/slogan_2"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#7D5B1E" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/thanhngan"
+                android:maxLines="1"
+                android:ellipsize="none"
+                android:scrollHorizontally="true" />
+
+
+
+            <!-- Form Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Product Name Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tensanpham"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/et_product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/nhapten"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:textSize="14sp" />
+
+                <!-- Category Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phanloai"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="8dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/product_types"
+                    android:prompt="@string/phanloaisanpham" />
+
+                <!-- Images Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/anh"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <FrameLayout
+                        android:id="@+id/image_upload_1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/white_panel">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="+"
+                            android:textSize="24sp"
+                            android:textColor="#CCCCCC" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/image_upload_2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/white_panel">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="+"
+                            android:textSize="24sp"
+                            android:textColor="#CCCCCC" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uploadtoithieu"
+                    android:textSize="15sp"
+                    android:textColor="#666666"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Pricing Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/giagoc"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/et_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/nhapgia"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textSize="14sp" />
+
+                <!-- Short Description Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/motangan"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/et_short_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="top"
+                    android:hint="@string/motangangon"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:padding="12dp"
+                    android:textSize="14sp" />
+
+                <!-- Detailed Description Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/motact"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/et_detailed_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="top"
+                    android:hint="@string/motachitiet"
+                    android:inputType="textMultiLine"
+                    android:padding="12dp"
+                    android:textSize="14sp" />
+
+                <!-- Product Condition Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tinhtrang"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="8dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/product_conditions"
+                    android:prompt="@string/chontinhtrang" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thumua"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="8dp" />
+                <TextView
+                    android:id="@+id/giathumua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#D50000"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Submit Button -->
+                <TextView
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_donation_header"
+                    android:text="@string/button_pass"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Terms Text -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/term_text"
+                    android:textSize="12sp"
+                    android:textColor="#666666" />
+
+                <!-- Action Buttons Row -->
+
+                <!-- Cancel Button -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

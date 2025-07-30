@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.MatKhauDuocThayDoi">
+    <!-- Nền ảnh mờ -->
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        android:alpha="0.9" />
+
+
+    <!-- Khối nội dung -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- ✅ Icon thành công -->
+            <ImageView
+                android:id="@+id/successIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/checked"
+                android:scaleType="centerInside" />
+
+            <!-- Tiêu đề -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mật khẩu đã được thay đổi"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/tvForgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Mật khẩu mới của bạn phải khác biệt so với mật khẩu đã dùng trước đó."
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="8dp" />
+
+            <!-- Nút đăng nhập -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="ĐĂNG NHẬP"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_dark_button"
+                android:backgroundTint="@null"
+                android:layout_marginTop="16dp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

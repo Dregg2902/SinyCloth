@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">Project Android</string>
+    <string name="admin_login_text"><u>Tiếp tục đăng nhập với vai trò Shipper</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_web_client_id">765387758560-fi33agnejkgfjocc8lumis0akiiq0ru2.apps.googleusercontent.com</string>
+
+    <string name="username_error">Vui lòng nhập tên đăng nhập</string>
+    <string name="email_error">Vui lòng nhập email</string>
+    <string name="password_error">Vui lòng nhập mật khẩu</string>
+    <string name="confirm_password_error">Vui lòng nhập lại mật khẩu</string>
+    <string name="title_activity_bottom_navigation_shipper">BottomNavigationShipper</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="donation_history_title">Lịch sử quyên góp</string>
+    <string name="donation_thank_you">Cảm ơn bạn đã quyên góp</string>
+    <string name="donation_message">Bạn đã quyên góp cho chúng tôi %1$s đồ. Để thay lời cảm ơn chúng tôi tặng bạn %2$s SinyCloth. Chúng tôi rất vui khi đồng hành cùng bạn.</string>
+
+    <!-- Donation Items -->
+    <string name="donation_item_1_amount">10 kg</string>
+    <string name="donation_item_1_points">10000 điểm</string>
+    <string name="donation_item_1_date">15:18 6-4-2025</string>
+
+    <string name="donation_item_2_amount">5 kg</string>
+    <string name="donation_item_2_points">5000 điểm</string>
+    <string name="donation_item_2_date">18:15 4-4-2025</string>
+
+    <string name="donation_item_3_amount">20 kg</string>
+    <string name="donation_item_3_points">20000 điểm</string>
+    <string name="donation_item_3_date">14:10 1-4-2025</string>
+    <string name="term_text">Bằng cách đăng sản phẩm, bạn đồng ý với các điều khoản và chính sách của SinyCloth</string>
+    <string name="button_pass">PASS SẢN PHẨM</string>
+    <string name="thumua">Giá Chúng Tôi Thu Mua</string>
+    <string name="tinhtrang">Tình Trạng Sản Phẩm</string>
+    <string name="motachitiet">Mô tả chi tiết về tình trạng, chất liệu, kích thước và các thông tin khác của sản phẩm</string>
+    <string name="motact">Mô Tả Chi Tiết</string>
+    <string name="motangangon">Mô tả ngắn gọn về sản phẩm (tối đa 100 ký tự)</string>
+    <string name="motangan">Mô Tả Ngắn</string>
+    <string name="nhapgia">Nhập giá sản phẩm (VNĐ)</string>
+    <string name="giagoc">Giá Gốc Của Sản Phẩm</string>
+    <string name="uploadtoithieu">Upload tối thiểu 1 ảnh/món đồ</string>
+    <string name="anh">Hình Ảnh</string>
+    <string name="phanloai">Phân Loại</string>
+    <string name="nhapten">Nhập tên sản phẩm</string>
+    <string name="tensanpham">Tên Sản Phẩm</string>
+    <string name="thanhngan">=======================================================</string>
+    <string name="slogan_2">CHƯA BAO GIỜ DỄ ĐẾN VẬY</string>
+    <string name="slogan_1">DỌN DẸP TỦ ĐỒ</string>
+    <string name="phanloaisanpham">Chọn phân loại sản phẩm</string>
+    <string name="chontinhtrang">Chọn tình trạng sản phẩm</string>
+    <!-- Tình trạng sản phẩm -->
+    <string-array name="product_conditions">
+        <item>Mới 100% (chưa sử dụng)</item>
+        <item>Như mới 99% (sử dụng 1-2 lần)</item>
+        <item>Rất tốt 95% (ít dấu hiệu sử dụng)</item>
+        <item>Tốt 90% (có dấu hiệu sử dụng nhẹ)</item>
+        <item>Khá tốt 85% (sử dụng bình thường)</item>
+        <item>Trung bình 80% (có dấu hiệu sử dụng rõ)</item>
+        <item>Còn dùng được 70% (nhiều dấu hiệu sử dụng)</item>
+    </string-array>
+
+
+    <!-- Loại sản phẩm cụ thể -->
+    <string-array name="product_types">
+        <item>Áo sơ mi</item>
+        <item>Áo thun</item>
+        <item>Áo polo</item>
+        <item>Áo hoodie</item>
+        <item>Áo khoác</item>
+        <item>Áo vest/blazer</item>
+        <item>Quần jean</item>
+        <item>Quần tây</item>
+        <item>Quần short</item>
+        <item>Váy</item>
+        <item>Chân váy</item>
+        <item>Đầm</item>
+        <item>Giày thể thao</item>
+        <item>Giày cao gót</item>
+        <item>Giày oxford</item>
+        <item>Dép/sandal</item>
+        <item>Túi xách tay</item>
+        <item>Túi đeo chéo</item>
+        <item>Ba lô</item>
+        <item>Ví</item>
+        <item>Thắt lưng</item>
+        <item>Kính mát</item>
+        <item>Đồng hồ</item>
+        <item>Trang sức</item>
+        <item>Mũ/nón</item>
+        <item>Khăn</item>
+    </string-array>
+</resources>

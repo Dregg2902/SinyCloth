@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".shipper.ProfileShipper">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- Nền ảnh mờ -->
+        <ImageView
+            android:id="@+id/bgImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo"
+            android:clickable="true"
+            android:focusable="true"
+            android:alpha="0.9" />
+        <!-- Khối nội dung -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/loginCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+
+                <!-- Tiêu đề -->
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:indeterminate="true"
+                    android:indeterminateDrawable="@drawable/progressbar_custom"
+                    android:visibility="gone" />
+                <!-- Ảnh đại diện -->
+                <ImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/avatarshipper"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+                    <!-- Mỗi dòng là LinearLayout horizontal gồm Label + Value -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Họ và tên:"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textColor="#000000"/>
+                        <TextView
+                            android:id="@+id/txt_fullname"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Nguyễn Dương Hoàng Phúc"
+                            android:textSize="20sp"
+                            android:textColor="#444444"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Giới tính:"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textColor="#000000"/>
+                        <TextView
+                            android:id="@+id/txt_gender"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Nam"
+                            android:textSize="20sp"
+                            android:textColor="#444444"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày sinh:"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textColor="#000000"/>
+                        <TextView
+                            android:id="@+id/txt_dob"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="01/06/2004"
+                            android:textSize="20sp"
+                            android:textColor="#444444"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Vai trò:"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textColor="#000000"/>
+                        <TextView
+                            android:id="@+id/txt_role"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Shipper"
+                            android:textSize="20sp"
+                            android:textColor="#444444"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Email:"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textColor="#000000"/>
+                        <TextView
+                            android:id="@+id/txt_email"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="phucsynicloth@gmail.com"
+                            android:textSize="20sp"
+                            android:textColor="#444444"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Số điện thoại:"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textColor="#000000"/>
+                        <TextView
+                            android:id="@+id/txt_phone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="0901234567"
+                            android:textSize="20sp"
+                            android:textColor="#444444"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="15dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Địa chỉ:"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textColor="#000000"/>
+                        <TextView
+                            android:id="@+id/txt_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Thủ Đức, TP Hồ Chí Minh"
+                            android:textSize="20sp"
+                            android:textColor="#444444"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- Item : Đăng xuất -->
+                <LinearLayout
+                    android:id="@+id/btnlogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/setting_logout"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/icon_dangxuat" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_weight="1"
+                        android:text="Đăng xuất"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="39dp"
+                        android:layout_height="39dp"
+                        android:src="@drawable/next_arrow" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</FrameLayout>

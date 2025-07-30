@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header với Order ID và Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_order_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="#ORD123456"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+
+            <!-- ✅ STATUS VỚI ICON CHO 3 TRẠNG THÁI -->
+            <TextView
+                android:id="@+id/tv_order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚚 Đang giao"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_status_shipping"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <!-- Product Info Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <!-- Product Image -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:layout_marginEnd="12dp">
+
+                <ImageView
+                    android:id="@+id/iv_product_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_placeholder" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product Details -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Áo thun nam cao cấp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/tv_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="250,000 VNĐ"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#E91E63"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Order Type và Date -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_order_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚚 Đi giao hàng"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_order_type_delivery"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tv_order_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="24/05/2025 - 16:30"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <!-- ✅ STATUS DETAILS - THÔNG TIN CHI TIẾT TRẠNG THÁI -->
+        <TextView
+            android:id="@+id/tv_status_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏰ Đơn hàng đang được giao đến bạn"
+            android:textSize="13sp"
+            android:textColor="#2196F3"
+            android:textStyle="italic"
+            android:background="@drawable/bg_status_info"
+            android:padding="10dp"
+            android:layout_marginBottom="12dp"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical" />
+
+        <!-- Customer Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_customer_info"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <!-- Customer Name & Phone -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_person"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    app:tint="#666666" />
+
+                <TextView
+                    android:id="@+id/tv_customer_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nguyễn Văn A"
+                    android:textSize="13sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_customer_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0123456789"
+                    android:textSize="13sp"
+                    android:textColor="#666666"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <!-- Address -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_location"
+                    android:layout_gravity="top"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="2dp"
+                    app:tint="#666666" />
+
+                <TextView
+                    android:id="@+id/tv_customer_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123 Đường ABC, Phường XYZ, Quận 1, TP.HCM"
+                    android:textSize="13sp"
+                    android:textColor="#333333"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- Notes (if any) -->
+        <TextView
+            android:id="@+id/tv_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📝 Ghi chú: Giao hàng trước 18h"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:textStyle="italic"
+            android:background="@drawable/bg_notes"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone" />
+
+        <!-- ✅ ACTION BUTTONS CHO 3 TRẠNG THÁI -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btn_view_details"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Chi tiết"
+                android:textSize="11sp"
+                android:layout_marginEnd="6dp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="12dp" />
+
+            <!-- CONTACT BUTTON - Đổi text theo trạng thái -->
+            <Button
+                android:id="@+id/btn_contact"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Liên hệ"
+                android:textSize="11sp"
+                android:layout_marginEnd="6dp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="12dp"
+                android:visibility="visible" />
+
+            <!-- CANCEL BUTTON - Chỉ hiện khi đang giao -->
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Hủy đơn"
+                android:textSize="11sp"
+                android:backgroundTint="#EF5350"
+                android:layout_marginEnd="6dp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="12dp"
+                android:visibility="visible" />
+
+            <!-- REORDER BUTTON - Chỉ hiện khi đã giao hoặc đã hủy -->
+            <Button
+                android:id="@+id/btn_reorder"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Mua lại"
+                android:textSize="11sp"
+                android:backgroundTint="#4CAF50"
+                android:minWidth="0dp"
+                android:paddingHorizontal="12dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

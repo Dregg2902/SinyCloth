@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mapShipper"
+    tools:context=".shipper.MapShipper">
+
+    <!-- Fragment chứa Google Map -->
+    <fragment
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Nút Filter (ở góc trên bên phải) -->
+    <ImageButton
+        android:id="@+id/btn_filter"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="3dp"
+        android:layout_gravity="top|end"
+        android:src="@drawable/bolocthongtin"
+        android:contentDescription="Filter"
+        android:background="@drawable/filter_button_background"
+        android:scaleType="centerInside"
+        android:elevation="8dp"
+        android:padding="12dp" />
+
+    <!-- Custom Zoom Controls (ở bên trái) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        android:background="@drawable/zoom_controls_background"
+        android:elevation="8dp">
+
+        <ImageButton
+            android:id="@+id/btn_zoom_in"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_add"
+            android:contentDescription="Zoom In"
+            android:padding="8dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0" />
+
+        <ImageButton
+            android:id="@+id/btn_zoom_out"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            android:contentDescription="Zoom Out"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

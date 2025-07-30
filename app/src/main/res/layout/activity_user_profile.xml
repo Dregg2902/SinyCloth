@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_user_profile.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/user_profile"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="#1E5DDBAF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header với Avatar và thông tin cơ bản -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <ImageButton
+                android:id="@+id/btnBack2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Quay lại"
+                app:srcCompat="@drawable/back_button"
+                app:tint="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <!-- Avatar Container -->
+                <FrameLayout
+                    android:id="@+id/avatarContainer"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/ivAvatar"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/avatarshipper"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/circle_background" />
+
+                    <!-- Camera icon cho upload (chỉ hiện khi edit mode) -->
+                    <ImageView
+                        android:id="@+id/ivCameraIcon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="bottom|end"
+                        android:src="@drawable/ic_camera"
+                        android:background="@drawable/circle_primary_background"
+                        android:padding="6dp"
+                        android:visibility="gone"
+                        app:tint="@android:color/white" />
+                </FrameLayout>
+
+                <!-- Full Name (View Mode) -->
+                <TextView
+                    android:id="@+id/tvFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/avatarContainer"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:text="Nguyễn Văn A"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#333" />
+
+                <!-- Username -->
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvFullName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="username"
+                    android:textSize="14sp"
+                    android:textColor="#666" />
+
+                <!-- Edit Button -->
+                <ImageButton
+                    android:id="@+id/btnEdit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_edit"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:tint="#009999" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Stats Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardUserStats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Points -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15.5K"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Điểm"
+                        android:textSize="12sp"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <!-- Level -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gold"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFD700" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cấp độ"
+                        android:textSize="12sp"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <!-- Profile Completion -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvProfileCompletion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="85%"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/success" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hồ sơ"
+                        android:textSize="12sp"
+                        android:textColor="#666" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Form Information Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thông tin cá nhân"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Full Name Field -->
+                <LinearLayout
+                    android:id="@+id/layoutFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Họ và tên"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- View mode -->
+                    <TextView
+                        android:id="@+id/tvFullNameView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nguyễn Văn A"
+                        android:textSize="16sp"
+                        android:textColor="#333"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_background_grey" />
+
+                    <!-- Edit mode -->
+                    <EditText
+                        android:id="@+id/etFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nhập họ và tên"
+                        android:textSize="16sp"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_edittext_background"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- Email Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="email@example.com"
+                        android:textSize="16sp"
+                        android:textColor="#333"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_background_grey" />
+                </LinearLayout>
+
+                <!-- Phone Number Field -->
+                <LinearLayout
+                    android:id="@+id/layoutPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Số điện thoại"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- View mode -->
+                    <TextView
+                        android:id="@+id/tvPhoneNumberView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0123456789"
+                        android:textSize="16sp"
+                        android:textColor="#333"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_background_grey" />
+
+                    <!-- Edit mode -->
+                    <EditText
+                        android:id="@+id/etPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nhập số điện thoại"
+                        android:inputType="phone"
+                        android:textSize="16sp"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_edittext_background"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- Date of Birth Field -->
+                <LinearLayout
+                    android:id="@+id/layoutDateOfBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngày sinh"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- View mode -->
+                    <TextView
+                        android:id="@+id/tvDateOfBirthView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="01/01/2000"
+                        android:textSize="16sp"
+                        android:textColor="#333"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_background_grey" />
+
+                    <!-- Edit mode -->
+                    <EditText
+                        android:id="@+id/etDateOfBirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Chọn ngày sinh"
+                        android:textSize="16sp"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_edittext_background"
+                        android:focusable="false"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- Gender Field -->
+                <LinearLayout
+                    android:id="@+id/layoutGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Giới tính"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- View mode -->
+                    <TextView
+                        android:id="@+id/tvGenderView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nam"
+                        android:textSize="16sp"
+                        android:textColor="#333"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_background_grey" />
+
+                    <!-- Edit mode -->
+                    <RadioGroup
+                        android:id="@+id/rgGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <RadioButton
+                            android:id="@+id/rbMale"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Nam" />
+
+                        <RadioButton
+                            android:id="@+id/rbFemale"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Nữ" />
+
+                        <RadioButton
+                            android:id="@+id/rbOther"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Khác" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- Address Field -->
+                <LinearLayout
+                    android:id="@+id/layoutAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Địa chỉ"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- View mode -->
+                    <TextView
+                        android:id="@+id/tvAddressView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="123 Đường ABC, Quận XYZ"
+                        android:textSize="16sp"
+                        android:textColor="#333"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_background_grey" />
+
+                    <!-- Edit mode -->
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nhập địa chỉ"
+                        android:textSize="16sp"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_edittext_background"
+                        android:minLines="2"
+                        android:gravity="top"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Action Buttons (only visible in edit mode) -->
+        <LinearLayout
+            android:id="@+id/layoutActionButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hủy"
+                android:textColor="@android:color/black"
+                android:background="@drawable/bg_donation_header"
+                android:layout_marginEnd="8dp"/>
+<!--                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />-->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lưu"
+                android:textColor="@android:color/black"
+                android:background="@drawable/bg_donation_header"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Change Password Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="🔐 Đổi mật khẩu"
+            android:textColor="#111111"
+            style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+    </LinearLayout>
+</ScrollView>

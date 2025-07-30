@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/dashboard"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/map"
+        android:icon="@drawable/map"
+        android:title="Bản đồ" />
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/thongbao_button"
+        android:title="Thông báo" />
+    <item
+        android:id="@+id/shippersetting"
+        android:icon="@drawable/shippersetting"
+        android:title="Hồ sơ" />
+</menu>

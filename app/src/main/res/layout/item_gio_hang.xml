@@ -1,0 +1,109 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- Ảnh sản phẩm -->
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_quantity"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_sample_product" />
+
+        <!-- Tên + Giá -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/img_product"
+            android:layout_marginStart="8dp"
+            android:layout_alignTop="@id/img_product">
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Áo sơ mi lông cừu"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="269.000 vnd"
+                android:textSize="14sp"
+                android:textColor="#888888" />
+        </LinearLayout>
+
+        <!-- Nút Xoá -->
+        <ImageView
+            android:id="@+id/btn_delete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_delete"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="4dp"
+            android:layout_alignTop="@id/img_product" />
+
+        <!-- CheckBox chọn -->
+
+        <!-- Số lượng -->
+
+        <CheckBox
+            android:id="@+id/checkbox_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_product"
+            android:layout_alignStart="@id/img_product"
+            android:layout_marginStart="153dp"
+            android:layout_marginTop="-42dp" />
+
+        <LinearLayout
+            android:id="@+id/quantity_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@id/checkbox_item"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/btn_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="−"
+                android:textSize="18sp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/tv_quantity"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/btn_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="18sp"
+                android:textColor="#000" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

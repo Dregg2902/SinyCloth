@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/trang_chu_chinh"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1E5DDBAF"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1E5DDBAF"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <SearchView
+                    android:id="@+id/open_search_bar_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgroud_search"
+                    android:clickable="true"
+                    android:queryBackground="@drawable/backgroud_search"
+                    android:focusable="true"
+                    android:iconifiedByDefault="false"
+                    android:queryHint="Bạn cần tìm gì" />
+
+                <ImageView
+                    android:id="@+id/gio_hang"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/muahang_button" />
+
+            </LinearLayout>
+
+            <!-- Hero Image -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/rounded_white_button"
+                android:clipToOutline="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/background_trangchu" />
+            </FrameLayout>
+
+            <!-- Category Icons: Horizontal Scrollable -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:background="@drawable/rounded_white_button"
+                android:fillViewport="true"
+                android:clipToOutline="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gradient_linear"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <!-- Item 1 -->
+                    <LinearLayout
+                        android:id="@+id/category_ao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_shirt" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Áo"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Item 2 -->
+                    <LinearLayout
+                        android:id="@+id/category_vay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_dress" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Váy"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Item 3 -->
+                    <LinearLayout
+                        android:id="@+id/category_chan_vay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_pants" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Chân váy"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Item 4 -->
+                    <LinearLayout
+                        android:id="@+id/category_quan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_quan" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Quần"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!-- Item 5 -->
+                    <LinearLayout
+                        android:id="@+id/category_giay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_giay" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Giày"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!-- Item 6 -->
+                    <LinearLayout
+                        android:id="@+id/category_non"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_non" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Nón"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!-- Item 7 -->
+                    <LinearLayout
+                        android:id="@+id/category_phu_kien"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_phukien" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Phụ kiện"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Featured Products -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="SẢN PHẨM NỔI BẬT"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- QUAN TRỌNG: Sửa RecyclerView để hoạt động đúng trong ScrollView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_products"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:nestedScrollingEnabled="true"
+                android:overScrollMode="never"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/btn_load_more"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:textAlignment="center"
+                android:background="@drawable/button_xemthem"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="XEM THÊM"
+                android:elevation="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

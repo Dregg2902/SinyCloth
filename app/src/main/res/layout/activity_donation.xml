@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/donation"
+    android:orientation="vertical"
+    tools:context=".fragment.DonationActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💝 QUYÊN GÓP ĐỒ "
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#006666"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <!-- User Stats Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardUserStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📊 Thống kê của bạn"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/tvCurrentPoints"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Điểm hiện tại: 0"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:id="@+id/tvUserLevel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cấp độ: Beginner"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/level_bronze" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvKgToNextLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cần quyên góp thêm 5.0 kg để lên cấp"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Donation Form Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🎁 Thông tin quyên góp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Kg Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Số kg đồ quyên góp"
+                        app:startIconDrawable="@drawable/ic_scale"
+                        app:endIconMode="clear_text"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etKg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Expected Points -->
+                    <TextView
+                        android:id="@+id/tvExpectedPoints"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nhập số kg để xem điểm dự kiến"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginBottom="16dp"
+                        android:padding="8dp"
+                        android:background="@drawable/bg_rounded_light"
+                        android:gravity="center" />
+
+                    <!-- Wish Message Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Lời chúc cho người nhận"
+                        app:startIconDrawable="@drawable/ic_message"
+                        app:endIconMode="clear_text"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etWishMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:maxLines="3"
+                            android:minLines="2" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Points Calculation Info -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:background="@drawable/bg_info_light"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="💡"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:lineSpacingExtra="2dp"
+                            android:text="1 kg đồ quyên góp = 1,000 điểm\nĐiểm sẽ được cộng khi hoàn thành đơn hàng"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/btnViewHistory"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="📋 Lịch sử"
+                    android:textSize="14sp"
+                    android:background="@drawable/bg_button_secondary"
+                    android:textColor="@color/primary_color"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCreateDonation"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="2"
+                    android:layout_marginStart="8dp"
+                    android:text="💝 Tạo đơn quyên góp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_button_primary"
+                    android:textColor="@android:color/black"/>
+    <!--                style="@style/Widget.MaterialComponents.Button" />-->
+
+            </LinearLayout>
+
+            <!-- Donation Impact Info -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/success_light">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🌟 Tác động của quyên góp"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/success_dark"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Giúp đỡ những người khó khăn\n• Bảo vệ môi trường bằng việc tái sử dụng\n• Tích lũy điểm thưởng và nhận quà\n• Góp phần xây dựng cộng đồng chia sẻ"
+                        android:textSize="12sp"
+                        android:textColor="@color/success_dark"
+                        android:lineSpacingExtra="2dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

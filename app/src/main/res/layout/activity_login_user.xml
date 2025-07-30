@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.LoginUser">
+    <!-- Nền ảnh mờ -->
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        android:clickable="true"
+        android:focusable="true"
+        android:alpha="0.9" />
+
+    <!-- Icon quay lại -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_white_button"
+        android:src="@drawable/back_button"
+        android:scaleType="centerInside"
+        android:contentDescription="Back"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Khối nội dung -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Tiêu đề -->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/progressbar_custom"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ĐĂNG NHẬP"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_edittext"
+                android:hint="Vui lòng nhập tên đăng nhập"
+                android:inputType="textEmailAddress"
+                android:paddingStart="16dp" />
+
+            <!-- Mật khẩu -->
+            <TextView
+                android:id="@+id/username_error2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/username_error"
+                android:textColor="@color/red"
+                android:visibility="invisible" />
+
+            <!-- Mật khẩu -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edtMatKhauMoi"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint="Mật khẩu"
+                    android:inputType="textPassword"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="48dp"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageButton
+                    android:id="@+id/showpass"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/an_matkhau" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/password_error2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/password_error"
+                android:textColor="@color/red"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <CheckBox
+                    android:id="@+id/rememberLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nhớ đăng nhập"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvForgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Quên mật khẩu"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <!-- Nút đăng nhập -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="ĐĂNG NHẬP"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_dark_button"
+                android:backgroundTint="@null"
+                android:layout_marginTop="16dp" />
+
+            <!-- Hoặc đăng nhập bằng -->
+            <TextView
+                android:id="@+id/tvOr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hoặc đăng nhập bằng"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_marginTop="24dp" />
+
+            <!-- Nút Google -->
+            <ImageButton
+                android:id="@+id/btnGoogle"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext"
+                android:src="@drawable/logo_google"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Login with Google" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

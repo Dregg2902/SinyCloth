@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- QUYỀN INTERNET -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProjectAndroid"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".user.TaoLaiMatKhau"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".user.MaOTPMatKhau"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".user.QuenMatKhau"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".user.BottomNavigation"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".user.ChiTietSanPham"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".user.CheckoutActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".user.CartActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".user.MyOrdersActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".user.DonationHistoryActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".user.UserProfileActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".user.DangKyNguoiDung"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".shipper.LoginAdmin"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".shipper.BottomNavigationShipper"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".user.LoginUser"
+            android:exported="false" >
+        </activity>
+
+        <activity
+            android:name=".user.WelcomeApp"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCs4bZo6dgcEICIpKb7uQhjd-jdzJTZQFg" />
+    </application>
+
+</manifest>

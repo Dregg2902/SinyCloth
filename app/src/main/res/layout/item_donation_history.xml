@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ✅ HEADER ROW -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/khung_quyen_gop"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <!-- Status Indicator -->
+
+            <!-- Product Name -->
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Áo khoác mùa đông"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Áo khoác mùa đông cho trẻ em" />
+
+            <!-- Status Badge -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_status_delivered"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                android:layout_marginEnd="5dp"
+                android:text="Đã giao"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="Đã giao" />
+
+        </LinearLayout>
+
+        <!-- ✅ INFO ROW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <!-- Kg Info -->
+            <LinearLayout
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_kg_badge"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginEnd="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚖️"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/tvKg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.5 kg"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_white"
+                    tools:text="2.5 kg" />
+
+            </LinearLayout>
+
+            <!-- Points Info -->
+            <LinearLayout
+                android:id="@+id/layoutPoints"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_points_badge"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="🏆"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+2500"
+                    android:textColor="@color/level_gold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:text="+2500" />
+
+            </LinearLayout>
+
+
+            <!-- Date -->
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:layout_gravity="center"
+                android:text="15/01/2024"
+                android:textColor="@color/text_secondary"
+                android:textSize="10sp"
+                tools:text="15/01/2024 - 10:30" />
+
+        </LinearLayout>
+
+        <!-- ✅ WISH MESSAGE -->
+        <TextView
+            android:id="@+id/tvWishMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💌 Chúc các em nhỏ luôn vui khỏe và học giỏi!"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:background="#8899FFCC"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:visibility="visible"
+            tools:text="💌 Chúc các em nhỏ luôn vui khỏe và học giỏi!" />
+
+        <!-- ✅ DIVIDER LINE (optional) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <!-- ✅ ACTION BUTTONS (for future features) -->
+
+        <LinearLayout
+            android:id="@+id/layoutActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnViewDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Chi tiết"
+                android:textSize="12sp"
+                android:textColor="@color/primary_color"
+                android:background="@drawable/bg_button_secondary"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginEnd="8dp"
+                style="?attr/borderlessButtonStyle" />
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Chia sẻ"
+                android:textSize="12sp"
+                android:textColor="@color/primary_color"
+                android:background="@drawable/bg_button_secondary"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                style="?attr/borderlessButtonStyle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
